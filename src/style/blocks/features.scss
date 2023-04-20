@@ -1,0 +1,77 @@
+.features {
+  background: #faf9ff;
+  color: #3e3e3e;
+
+  &__content {
+    display: grid;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0 35px;
+    transition: all 0.3s ease 0s;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+    &:hover {
+      background: #ff5f6d none repeat scroll 0 0;
+      color: #fff;
+    }
+  }
+
+  &__icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f7fa;
+    border: #ff5f6d 1px solid;
+    border-radius: 50%;
+    margin-bottom: 20px;
+
+    transition: all 0.3s ease 0s;
+    @include square(58px) 
+  }
+
+  &__card:hover &__icon-container &__card-subtitle {
+    background: #ff5f6d none repeat scroll 0 0;
+    box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.20);
+    color: #fff;
+  }
+
+  &__card:hover &__card-subtitle {
+    color: #fff;
+  }
+
+  &__icon {
+    @include square(24px);
+  }
+
+  &__description {
+    display: block;
+    overflow: hidden;
+  }
+
+  &__title {
+    padding-top: 15px;
+    text-align: center;
+
+    @include font (40px, 1.2, 600);
+  }
+
+  &__subtitle {
+    text-align: center; 
+  }
+  
+  &__card-title {
+    text-align: center;
+    @include font (20px, 1.2, 400);
+  }
+
+  &__card-subtitle, &__subtitle {
+    color: #999999;
+    padding-top: 15px;
+  }
+}

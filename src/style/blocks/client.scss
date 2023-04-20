@@ -1,0 +1,17 @@
+.client {
+  background-image: url('../../../src/image/background/4.png');
+  text-align: center;
+
+  &__description {
+    padding: 130px 0 120px;
+  }
+
+  &__info {
+    @include font(20px, 35px, 200)
+  }
+
+  &__author {
+    color: #fff;
+    @include font(24px, 1.2, 400)
+  }
+}

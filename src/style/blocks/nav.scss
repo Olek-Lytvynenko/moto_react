@@ -1,0 +1,36 @@
+.nav {
+  display: none;
+
+  @include container-md {
+    display: flex;
+  }
+  
+  justify-content: space-between;
+  align-items: center;
+
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__item {
+    height: 100%;
+    margin-right: 30px;
+    &:first-child {
+      margin-left: 30px;
+    }
+  }
+
+  &__link {
+    text-transform: capitalize;
+    color: #fff;
+
+    @include font(16px, 25px, 600);
+    @extend %fontRoboto;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}

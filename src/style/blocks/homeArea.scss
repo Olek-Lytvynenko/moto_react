@@ -1,0 +1,66 @@
+.home {
+  background-image: url(../../src/image/background/9.png);
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-position: left top -75px;
+  height: 75vh;
+
+  @include container-md {
+    height: 100vh;
+  }
+  
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  &__content {
+    display: grid;
+  }
+
+  &__imgContainer {
+    z-index: 1;
+  }
+
+  &__img {
+    left: 205px;
+    position: absolute;
+    top: 45%;
+    width: 65%;
+
+    @include container-md {
+      left: -25px;
+      width: 52%;
+      top: calc(60vh - 52%);
+    }
+
+    @include container-lg {
+      left: -15px;
+      width: 55%;
+      top: -50px;
+    }
+  }
+
+  &__description {
+    position: relative;
+    top: -100px;
+    z-index: 1;
+  }
+
+  &__title {
+    color: #fff;
+    
+
+    @include font(42px, 60px, 700);
+
+    @include container-lg {
+      @include font(60px, 60px, 700);
+    }
+  }
+
+  &__subtitle {
+    color: #fff;
+
+    @include font(18px, 25px, 400);
+  }
+}

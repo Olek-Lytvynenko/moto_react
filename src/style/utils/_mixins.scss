@@ -1,0 +1,48 @@
+@mixin hover($_property, $_toValue) {
+  transition: #{$_property} 0.3s;
+  &:hover {
+    #{$_property}: $_toValue;
+  }
+}
+
+@mixin container-sm {
+  @media (min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin container-md {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin container-lg {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin container-xl {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin container-xxl {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin font($_size, $_line-height, $_weight: normal, $_letterS: normal) {
+  font-size: $_size;
+  font-weight: $_weight;
+  line-height: $_line-height;
+  letter-spacing: $_letterS;
+}
+
+@mixin square($_size) {
+  width: $_size;
+  height: $_size;
+}

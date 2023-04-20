@@ -1,0 +1,43 @@
+.service {
+  background: #faf9ff;
+  color: #3e3e3e;
+
+  &__content {
+    display: grid;
+  }
+
+  &__card {
+    padding: 110px 25px 105px;
+    transition: .3s;
+    &:hover {
+      box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.1);
+      transition: .3s;
+      transform: translateY(-5px);
+    }
+    
+  }
+
+  &__img-container {
+    float: left;
+    margin-right: 20px;
+    margin-top: 40px;
+  }
+
+  &__description {
+    display: block;
+    overflow: hidden;
+  }
+
+  &__title {
+    padding-top: 15px;
+
+    @include font (24px, 1.2, 600);
+  }
+
+  &__subtitle {
+    color: #999999;
+    padding-top: 15px;
+
+    @include font (14px, 25px, 400);
+  }
+}

@@ -1,0 +1,52 @@
+.header {
+  background-image: linear-gradient(to right, #ff5f6d 0%, #ffb270 100%);
+  background-repeat: repeat;
+  box-shadow: 0 0 20px -10px #000;
+  transition: all 0.5s ease 0s;
+  
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 50;
+
+  &__top-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__button {
+    background: 0 0;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    padding: 8px 30px;
+    color: #fff;
+
+    @include font(16px, 16px, 600);
+
+    &:hover {
+      background: #f75160 none repeat scroll 0 0;
+      border-color: #f75160;
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    @include container-md {
+      display: flex;
+    }
+  }
+
+  &__dynamic {
+    background-image: url(../../src/image/background/9.png);
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-position: left top;
+    box-shadow: none;
+    padding: 20px 0;
+    transition: all 0.5s ease 0s;
+  }
+}
