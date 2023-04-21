@@ -45,13 +45,17 @@
   }
 
   &__dynamic {
-    background-image: url(../../src/image/background/9.png);
-    background-repeat: no-repeat;
-    background-origin: border-box;
-    background-position: left top;
-    box-shadow: none;
-    padding: 20px 0;
-    transition: all 0.5s ease 0s;
+    padding: 5px 0;
+
+    @include container-md {
+      background-image: url(../../src/image/background/9.png);
+      background-repeat: no-repeat;
+      background-origin: border-box;
+      background-position: left top;
+      box-shadow: none;
+      padding: 20px 0;
+      transition: all 0.5s ease 0s;
+    }    
   }
 
   &__icon-container {

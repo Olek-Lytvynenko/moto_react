@@ -8,6 +8,7 @@ import ServiceArea from './components/ServiceArea';
 import { Subscribe } from './components/SubscribeArea';
 import { FunfactArea } from './components/FunfactArea';
 import { TeamArea } from './components/TeamArea';
+import { Menu } from './components/Menu';
 
 function App() {
   const [count, setCount] = useState(0)

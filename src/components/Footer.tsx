@@ -9,11 +9,13 @@ function Footer () {
       <div className="container">
         <div className="footer__content">
           <div className="footer__container-contact">
-            {contact.map(data => (<Card data={data}/>))}
+            {contact.map(data => (<Card key={data.id} data={data}/>))}
           </div>
+
           <div className="footer__line"></div>
+
           <div className="footer__container-social">
-            {social.map(data => ( <Card data={data}/>))}
+            {social.map(data => ( <Card key={data.id + 1} data={data}/>))}
           </div>          
           <p className="footer__copyright">
             Copyright © &thinsp;

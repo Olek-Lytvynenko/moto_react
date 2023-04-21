@@ -7,9 +7,16 @@ export const TeamArea = () => {
     <section className='team'>
       <div className="container">
         <div className="team__content grid">
+          <div className="team__info grid__item grid__item--tablet-2-5 grid__item--desktop-4-9">
+            <h1 className="team__info-title">Lovely Team Member</h1>
+            <h2 className="team__info-subtitle">Lorem Ipsum is slechts een
+              proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum
+              is de standaard proeftekst in deze bedrijfstak sinds.
+            </h2>
+          </div>
           {teamData.map(item => (
             <div key={item.id} className={classNames(
-              'team__card grid__item',
+              'team__card',
               item.gridTablet,
               item.gridDesctop
             )}>

@@ -7,14 +7,14 @@ import { Menu } from "./Menu";
 function Header() {
   const [scroll, setScroll] = useState<number>(0);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [menuVisible, setMenuVisible] = useState<boolean>(false);
+
+  console.log(menuVisible);
 
   useEffect(() => {
       window.onresize = () => {setWindowWidth(window.innerWidth)};
       return () => {window.onresize};
-  }, [windowWidth]);
-
-  console.log(windowWidth);
-  
+  }, [windowWidth]);  
 
   useEffect(() => {
     const onScroll = () => setScroll(window.pageYOffset);
@@ -34,10 +34,11 @@ function Header() {
               src={png.logo}
             />
             </a>
-            <nav className={classNames("nav header__nav", {"header__nav--min": windowWidth < 768})}>
+            {menuVisible 
+              && <nav className={classNames("nav header__nav", {"header__nav--min": windowWidth < 768})}>
                 <ul className={classNames("nav__list", {"nav__list--min": windowWidth < 768})}>
                   {navList.map(item => (
-                    <li className={classNames("nav__item", {"nav__item--min": windowWidth < 768})}>
+                    <li key={item.title} className={classNames("nav__item", {"nav__item--min": windowWidth < 768})}>
                       <a 
                         className={classNames("nav__link", {"nav__link--min": windowWidth < 768})}
                         href={item.href}>{item.title}</a>
@@ -45,18 +46,19 @@ function Header() {
                   ))}
                 </ul>
                 <button className={classNames("header__button", {"header__button--min": windowWidth < 768})}>Download</button>
-            </nav>
+            </nav>}
+
+            {!menuVisible && <Menu />}
             {windowWidth < 768 
               &&
-              <a
-                href="#menu"
-                className='header__icon-container' 
-                onClick={() => {return <Menu />}}>
+              <button
+                className='header__icon-container'
+                onClick={() => setMenuVisible(prev => !prev)}>
                 <img
                   src={svg.menu}
                   alt=''
                   className="header__img"/>
-              </a> }
+              </button> }
         </div>
       </div>
     </header>

@@ -14,7 +14,7 @@ export const teamData = [
     gridTablet: 'grid__item--tablet-4-6',
   },
   { title: 'Nirob Khan',
-    subtitle: '3',
+    subtitle: 'Lovely Designer',
     id: 3,
     icon: 'nirob',
     gridDesctop: 'grid__item--desktop-7-9',

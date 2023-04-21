@@ -35,7 +35,7 @@
     @include square(58px) 
   }
 
-  &__card:hover &__icon-container &__card-subtitle {
+  &__card:hover &__icon-container {
     background: #ff5f6d none repeat scroll 0 0;
     box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.20);
     color: #fff;

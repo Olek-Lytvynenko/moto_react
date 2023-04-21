@@ -12,7 +12,7 @@ function FeaturesArea() {
             <p className="features__subtitle">Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds.</p>
           </div>
           {featuresData.map(item => (
-            <div className={className('features__card grid__item', item.gridTablet, item.gridDesctop)}>
+            <div className={className('features__card grid__item', item.gridTablet, item.gridDesctop)} key={item.id + 3}>
               <div className='features__icon-container'>
                 <img 
                   src={svg[item.icon as keyof typeof svg]} 
