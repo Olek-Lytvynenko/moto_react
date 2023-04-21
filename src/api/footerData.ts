@@ -15,7 +15,7 @@ export const footerData = [
     id: 3,
     group: 'contact',
     content: ['ur address goes here,', 'street,Crossroad123.'],
-    name: 'google-map',
+    name: 'googleMap',
   },
   {
     id: 4,
@@ -44,7 +44,7 @@ export const footerData = [
   {
     id: 8,
     group: 'social',
-    name: 'google-plus',
+    name: 'googlePlus',
     content: ['ur address goes here,', 'street,Crossroad123.']
   },
 ];

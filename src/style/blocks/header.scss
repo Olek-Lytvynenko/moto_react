@@ -38,6 +38,10 @@
     @include container-md {
       display: flex;
     }
+
+    &--min {
+      display: flex;
+    }
   }
 
   &__dynamic {
@@ -48,5 +52,13 @@
     box-shadow: none;
     padding: 20px 0;
     transition: all 0.5s ease 0s;
+  }
+
+  &__icon-container {
+    @include square(30px)
+  }
+
+  &__img {
+    width: 100%;
   }
 }

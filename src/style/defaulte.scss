@@ -6,3 +6,7 @@ p {
   line-height: 25px;
   margin: 0 0 15px;
 }
+
+input:focus-visible, input:focus {
+  outline: none;
+}

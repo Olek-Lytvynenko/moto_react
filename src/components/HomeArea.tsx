@@ -1,3 +1,5 @@
+import { png } from "../api/SvgR";
+
 function HomeArea() {
 
   return (
@@ -6,7 +8,7 @@ function HomeArea() {
         <div className="home__content grid">
           <div className="home__imgContainer grid__item grid__item--tablet-1-2 grid__item--desktop-1-7">
             <img 
-              src="../src/image/10.png" 
+              src={png.homeImg}
               alt="3d visual"
               className="home__img"
             />

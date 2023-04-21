@@ -1,0 +1,32 @@
+.funfact {
+  background-image: url('../../src/image/background/2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 130px 0 120px;
+
+    @include container-md {
+      flex-direction: row;
+    }
+  }
+
+  &__card {
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    color: white;
+    @include font(20px, 1.2, 600);
+  }
+
+  &__count {
+    color: white;
+    @include font(40px, 1.2, 600);
+  }
+}

@@ -5,19 +5,25 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import HomeArea from './components/HomeArea';
 import ServiceArea from './components/ServiceArea';
+import { Subscribe } from './components/SubscribeArea';
+import { FunfactArea } from './components/FunfactArea';
+import { TeamArea } from './components/TeamArea';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="motoapp">
+    <body className="motoapp body">
       <Header />
       <HomeArea />
-      <ServiceArea/>
-      <FeatersArea/>
+      <ServiceArea />
+      <FeatersArea />
+      <FunfactArea />
       <ClientArea />
-      <Footer/>
-    </div>
+      <TeamArea />
+      <Subscribe />
+      <Footer />
+    </body>
   )
 }
 

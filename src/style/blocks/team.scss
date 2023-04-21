@@ -1,0 +1,49 @@
+.team {
+  display: flex;
+  
+  &__content {
+    display: grid;
+  }
+
+  &__card {
+    display: fle;
+    padding: 110px 25px 105px;
+    transition: .3s;
+    &:hover {
+      transform: scale(120%);
+      transition: all 0.7s ease-in-out 0s;
+    }
+  }
+
+  &__card:hover &__description {
+    visibility: visible;
+  }
+
+  &__img-container {
+    width: 240px;
+  }
+
+  &__description {
+    padding: 22px 0 12px;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+  }
+
+  &__title {
+    padding-top: 15px;
+
+    @include font (24px, 1.2, 600);
+  }
+
+  &__subtitle {
+    color: #999999;
+    padding-top: 15px;
+
+    @include font (14px, 25px, 400);
+  }
+}

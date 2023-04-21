@@ -1,17 +1,20 @@
 import classNames from "classnames";
-import { useEffect, useState } from "react";
-
-const navList = [
-  {title: 'home', href: '#'},
-  {title: 'features', href: '#features'},
-  {title: 'pricing', href: '#pricing'},
-  {title: 'client', href: '#client'},
-  {title: 'team', href: '#team'},
-  {title: 'contact', href: '#contact'},
-];
+import { useEffect, useRef, useState } from "react";
+import { png, svg } from "../api/SvgR";
+import { navList } from '../api/navList';
+import { Menu } from "./Menu";
 
 function Header() {
   const [scroll, setScroll] = useState<number>(0);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+      window.onresize = () => {setWindowWidth(window.innerWidth)};
+      return () => {window.onresize};
+  }, [windowWidth]);
+
+  console.log(windowWidth);
+  
 
   useEffect(() => {
     const onScroll = () => setScroll(window.pageYOffset);
@@ -28,21 +31,32 @@ function Header() {
             <img
               className="logo__img"
               alt="moto logo"
-              src="../src/image/logo.webp"
+              src={png.logo}
             />
             </a>
-            <nav className="nav header__nav">
-                <ul className="nav__list">
+            <nav className={classNames("nav header__nav", {"header__nav--min": windowWidth < 768})}>
+                <ul className={classNames("nav__list", {"nav__list--min": windowWidth < 768})}>
                   {navList.map(item => (
-                    <li className="nav__item">
+                    <li className={classNames("nav__item", {"nav__item--min": windowWidth < 768})}>
                       <a 
-                        className="nav__link"
+                        className={classNames("nav__link", {"nav__link--min": windowWidth < 768})}
                         href={item.href}>{item.title}</a>
                     </li>
                   ))}
                 </ul>
-                <button className='header__button'>Download</button>
+                <button className={classNames("header__button", {"header__button--min": windowWidth < 768})}>Download</button>
             </nav>
+            {windowWidth < 768 
+              &&
+              <a
+                href="#menu"
+                className='header__icon-container' 
+                onClick={() => {return <Menu />}}>
+                <img
+                  src={svg.menu}
+                  alt=''
+                  className="header__img"/>
+              </a> }
         </div>
       </div>
     </header>

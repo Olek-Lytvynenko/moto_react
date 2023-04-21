@@ -1,6 +1,5 @@
 .nav {
   display: none;
-
   @include container-md {
     display: flex;
   }
